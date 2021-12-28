@@ -1,0 +1,14 @@
+{
+  "name": "zenn",
+  "repository": "git@github.com:dqn/zenn.git",
+  "author": "dqn <dqn270@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "new:article": "zenn new:article",
+    "new:book": "zenn new:book",
+    "preview": "zenn preview"
+  },
+  "devDependencies": {
+    "zenn-cli": "^0.1.100"
+  }
+}
