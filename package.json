@@ -9,8 +9,8 @@
     "preview": "zenn preview"
   },
   "devDependencies": {
-    "prettier": "^2.5.1",
-    "textlint": "^12.1.0",
+    "prettier": "2.5.1",
+    "textlint": "12.1.0",
     "zenn-cli": "0.1.100"
   }
 }
