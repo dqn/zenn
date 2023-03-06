@@ -48,5 +48,19 @@ console.log("Running a background task")(async () => {
 
 ちなみに筆者は `"trailingComma": "all"` だけ設定しています。これには「無駄な差分が生まれなくなる」、「可読性にほとんど影響を与えない」といった明確な理由があります。みなさんもデフォルト以外の設定で Prettier を使う意図があれば是非主張をお聞かせください。
 
+## 追記
+
+### printWidth は 80 より大きい値を設定することが推奨されていない
+
+長い行は読みやすくするために空白や改行が使われることが多く、平均値は printWidth を大きく下回ることがほとんどだからとのこと。
+
+https://prettier.io/docs/en/options.html#print-width
+
+### Prettier 開発チームがこれ以上オプションを追加しない意向を示している
+
+Prettier の開発者目線の話ですが、Prettier の開発チームはこれ以上オプションを追加しない意向を示しています。Prettier の最大の目的はスタイルをめぐる論争を止めることなのに、オプションを増やせば増やすほどその目的から遠ざかるとのこと。
+
+https://prettier.io/docs/en/option-philosophy.html
+
 [^1]: [Prettier はデフォルトでインデントのためにタブを使うべきなのだろうか](https://sosukesuzuki.dev/posts/prettier-uses-tabs/)
 [^2]: [インデントにタブを使うアクセシビリティ上の利点](https://sosukesuzuki.dev/posts/tabs-for-a11y/)
