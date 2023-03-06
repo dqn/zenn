@@ -1,9 +1,9 @@
 ---
 title: "TypeScript で union to tuple をするのが難しい理由"
-emoji: ""
+emoji: "🧋"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["typescript"]
-published: false
+published: true
 ---
 
 次のように、union の構成要素を 1 つずつ持つ tuple の型を定義したいときの話です。
@@ -23,7 +23,7 @@ https://github.com/microsoft/TypeScript/issues/13298#issuecomment-514082646
 
 このコメントでは 2 通りの方法について言及しています。
 
-### 1. 関数のオーバーロードを利用した方法
+### 1. 関数のオーバーロードを利用する方法
 
 複数の Function Type Expressions からオーバーロードされた関数の型を作るときは次のようにしてできます。
 
@@ -48,7 +48,7 @@ type T4 = T3 extends () => infer R ? R : never;
 3. 先述の方法で型を 1 つだけ取り出し、tuple に追加する
 4. 構成要素がなくなるまで「3」を繰り返す
 
-コードにすると次のようになります。
+コードは次のようになります。
 
 <!-- prettier-ignore -->
 ```ts
@@ -71,9 +71,9 @@ type T1 = UnionToTuple<"a" | "b" | "c">;
 
 https://github.com/dqn/broken-union-to-tuple
 
-### 2. union がとり得るすべての順列を列挙する方法
+### 2. union の構成要素がとり得るすべての順列を列挙する方法
 
-次のような方法で、union がとり得る順列をすべて列挙した型をつくることができます。
+次のような方法で、union の構成要素がとり得る順列をすべて列挙した型をつくることができます。
 
 <!-- prettier-ignore -->
 ```ts
@@ -197,7 +197,7 @@ type UnionToTuple<Union,Tuple extends readonly unknown[]> =
     : ConstituentsError<Union, Tuple>;
 ```
 
-次のように型を書き捨ててチェックする方法でもいいですが、Linter やコンパイラオプションの設定によっては警告が発生する場合があるのと、そもそも書き忘れると効果がないので先述の方法をお勧めします。
+次のように型を書き捨ててチェックする方法でもいいですが、Linter やコンパイラオプションの設定によっては警告が発生する場合があるのと、そもそも書き忘れると効果がないので先述の方法をおすすめします。
 
 ```ts
 const tuple = ["a", "b", "c"] as const;
