@@ -3,8 +3,7 @@ title: "Vercel + Next.js + Apollo Server で GraphQL サーバを立てる 2023"
 emoji: "🍎"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["vercel", "nextjs", "graphql"]
-published: false
-publication_name: "pamxy_tech"
+published: true
 ---
 
 掲題でググると deprecated になった [apollo-server-micro](https://www.npmjs.com/package/apollo-server-micro) を使った方法ばかりヒットするので書きました。
