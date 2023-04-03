@@ -18,7 +18,7 @@ published: true
 
 ```bash
 $ npm i -D typescript tsup
-$ npm tsc --init
+$ npx tsc --init
 ```
 
 この記事では変数 foo を export するだけのパッケージをつくります。
