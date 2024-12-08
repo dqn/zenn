@@ -9,7 +9,7 @@
     "preview": "zenn preview"
   },
   "devDependencies": {
-    "prettier": "3.3.3",
+    "prettier": "3.4.2",
     "textlint": "14.3.0",
     "textlint-rule-preset-ja-spacing": "2.4.3",
     "textlint-rule-preset-ja-technical-writing": "10.0.1",
