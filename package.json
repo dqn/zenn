@@ -1,7 +1,5 @@
 {
   "name": "zenn",
-  "repository": "git@github.com:dqn/zenn.git",
-  "author": "dqn <dqn270@gmail.com>",
   "license": "MIT",
   "scripts": {
     "new:article": "zenn new:article",
